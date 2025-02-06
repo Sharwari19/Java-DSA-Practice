@@ -10,5 +10,7 @@
         String name = scan.next().trim();
 
         System.out.println("Hello " + name + "!");
+
+        scan.close();
     }
  }

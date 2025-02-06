@@ -18,5 +18,7 @@ public class EvenOdd {
         {
             System.out.println(input + " is Odd");
         }
+
+        scan.close();
     }
 }
