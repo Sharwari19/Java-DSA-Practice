@@ -1,5 +1,7 @@
 // Take in two numbers and an operator (+, -, *, /) and calculate the value. (Use if conditions)
 
+import java.util.*;
+
 public class Calculator {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -15,6 +17,7 @@ public class Calculator {
         System.out.println();
 
         while(true) {
+
             // take the operator as input 
 
             System.out.print("Enter the operator");
@@ -55,5 +58,7 @@ public class Calculator {
 
             System.out.println("Result: " + answer);
         }
+
+        scan.close();
     }
 }
