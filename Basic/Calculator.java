@@ -59,6 +59,6 @@ public class Calculator {
             System.out.println("Result: " + answer);
         }
 
-        scan.close();
+        scan.close();  
     }
 }
