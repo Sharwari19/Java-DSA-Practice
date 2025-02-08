@@ -1,7 +1,10 @@
 // very imp program practicle example to explain in interview
 
 
+
 package Functions.MethodOverloading;
+
+import java.lang.Math;
 
 public class Shapes {
 
@@ -23,12 +26,22 @@ public class Shapes {
     void area(double side1, double side2, double side3) {
         // using heron's formula
 
-        double s = (side1 + side2 + side3) / 2; // semi-perimeter s = (a + b + c) / 2
+        // Check if sides form a valid triangle
+        if (side1 + side2 > side3 && side2 + side3 > side1 && side1 + side3 > side2) {
+        {
 
-        // heron's formula A = sqrt(s(s - a)(s - b)(s - c))
-        double area = Math.sqrt(s * (s- side1) * (s - side2) * (s - side3));  
+            double s = (side1 + side2 + side3) / 2; // semi-perimeter s = (a + b + c) / 2
 
-        System.out.println("Area of triangle: " + area);
+            // heron's formula A = sqrt(s(s - a)(s - b)(s - c))
+            double area = Math.sqrt(s * (s- side1) * (s - side2) * (s - side3));  
+    
+            System.out.println("Area of triangle: " + area);
+        }
+        else {
+            System.out.println("Invalid triangle! The given sides do not form a valid triangle.");
+        }
+
+       
     }
     public static void main(String[] args) {
         Shapes obj = new Shapes();
@@ -36,5 +49,6 @@ public class Shapes {
         obj.area(11.0, 21.1, 51.3);     // calls triangle area method
         obj.area(11.5);             // calls circle area method
         obj.area(11, 21);      // calls rectangle area method
+
     }
 }
